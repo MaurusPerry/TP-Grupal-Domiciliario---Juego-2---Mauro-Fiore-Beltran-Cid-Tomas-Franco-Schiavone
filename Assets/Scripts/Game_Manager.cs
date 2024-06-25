@@ -27,8 +27,8 @@ public class Game_Manager : MonoBehaviour
     public int Objeto1y2_Value;
     void Start()
     {     
-        //Calcula un numero Random entre 0 y 49, que sera el cash, y lo coloca en el texto "CashText"
-        Cash = Random.Range(0, 50);
+        //Calcula un numero Random entre 0 y 75, que sera el cash, y lo coloca en el texto "CashText"
+        Cash = Random.Range(0, 76);
         CashText.text = Cash + " $";
 
         //Declaramos dos variables de tipo "int", que son nuestros dos numeros random que usaremos para seleccionar el objeto que saldra
