@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class Game_Manager : MonoBehaviour
     public int Objeto2_Value;
 
     public int Objeto1y2_Value;
+
+    public GameObject PanelAnswer;
+    public Text Answer_Text;
+    public Text Button_Reiniciar_Text;
     void Start()
     {     
         //Calcula un numero Random entre 0 y 75, que sera el cash, y lo coloca en el texto "CashText"
@@ -54,10 +59,12 @@ public class Game_Manager : MonoBehaviour
         if (Cash < Objeto1y2_Value)
         {
             Debug.Log("Correct");
+            MostrarPanelCorrecto();
         }
         else 
         {
             Debug.Log("InCorrect");
+            MostrarPanelInCorrecto();
         }
     }
     public void Alcanza_Justo_Button()
@@ -65,10 +72,12 @@ public class Game_Manager : MonoBehaviour
         if (Cash == Objeto1y2_Value)
         {
             Debug.Log("Correct");
+            MostrarPanelCorrecto();
         }
         else
         {
             Debug.Log("InCorrect");
+            MostrarPanelInCorrecto();
         }
     }
 
@@ -77,10 +86,36 @@ public class Game_Manager : MonoBehaviour
         if (Cash > Objeto1y2_Value)
         {
             Debug.Log("Correct");
+            MostrarPanelCorrecto();
         }
         else
         {
             Debug.Log("InCorrect");
+            MostrarPanelInCorrecto();
         }
     }
+    public void CargarEcenaJuego3() 
+    {
+        SceneManager.LoadScene("Juego3");
+    }
+    public void CargarEcenaSeleccionarJuegos()
+    {
+        SceneManager.LoadScene("SeleccionarJuegos");
+    }
+
+    public void MostrarPanelCorrecto() 
+    {
+        Answer_Text.text = "Correcto";
+        Button_Reiniciar_Text.text = "Reiniciar el desafío";
+
+        PanelAnswer.SetActive(true);
+    }
+    public void MostrarPanelInCorrecto()
+    {
+        Answer_Text.text = "Incorrecto";
+        Button_Reiniciar_Text.text = "Volver a intentarlo";
+
+        PanelAnswer.SetActive(true);
+    }
+
 }
