@@ -25,10 +25,14 @@ public class Game_Manager : MonoBehaviour
     public int Objeto1_Value;
     public int Objeto2_Value;
 
+    //Suma del valor de ambos Objetos
     public int Objeto1y2_Value;
 
+    //Despues de responder se mostrara este panel que originalemnete staba oculto
     public GameObject PanelAnswer;
+    //Texto de si la respuesta fue correcta o no el cual se encuentra dentro del AnswerPanel
     public Text Answer_Text;
+    //Al precionarse este button, se reinicia el juego, este es el texto del button, ya que depnediendo de si la respuesta fue correcta o no apreceera una frase o otra.
     public Text Button_Reiniciar_Text;
     void Start()
     {     
@@ -48,6 +52,7 @@ public class Game_Manager : MonoBehaviour
         Objeto1_Value = PrefabList[Random_Number_1].GetComponent<Value_Script>().Value;
         Objeto2_Value = PrefabList[Random_Number_2].GetComponent<Value_Script>().Value;
 
+        //Asigna al texto del pequeño panel abajo de los pedestales el valor con el simbolo de dinero
         Texto_Objeto1.text = Objeto1_Value + "  $";
         Texto_Objeto2.text = Objeto2_Value + "  $";
 
