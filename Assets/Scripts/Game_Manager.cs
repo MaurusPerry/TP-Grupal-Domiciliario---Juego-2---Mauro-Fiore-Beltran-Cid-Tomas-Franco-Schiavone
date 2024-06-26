@@ -69,6 +69,7 @@ public class Game_Manager : MonoBehaviour
     }
     public void Alcanza_Justo_Button()
     {
+        //logica del boton que compara si el presupuesto es suficiente para saldar justo
         if (Cash == Objeto1y2_Value)
         {
             Debug.Log("Correct");
@@ -83,6 +84,7 @@ public class Game_Manager : MonoBehaviour
 
     public void Alcanza_y_Sobra_Button()
     {
+        //logica del boton que compara si el presupuesto no alcanza
         if (Cash > Objeto1y2_Value)
         {
             Debug.Log("Correct");
