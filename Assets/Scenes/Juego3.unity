@@ -3251,8 +3251,8 @@ MonoBehaviour:
   Objeto1y2_Value: 0
   PanelAnswer: {fileID: 1746963110}
   Answer_Text: {fileID: 1473805444}
-  Button_AnswerCorrecto_Text: {fileID: 1886939179}
-  Button_AnswerIncorrecto_Text: {fileID: 1369124385}
+  Button_AnswerCorrecto_Text: {fileID: 1886939177}
+  Button_AnswerIncorrecto_Text: {fileID: 1369124383}
 --- !u!4 &473135684
 Transform:
   m_ObjectHideFlags: 0
@@ -7317,12 +7317,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 473135682}
-        m_MethodName: 
+      - m_Target: {fileID: 473135683}
+        m_MethodName: Button_Incorrecto_Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

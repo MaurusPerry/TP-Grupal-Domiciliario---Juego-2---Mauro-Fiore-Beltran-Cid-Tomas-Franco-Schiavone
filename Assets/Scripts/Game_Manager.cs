@@ -33,8 +33,8 @@ public class Game_Manager : MonoBehaviour
     //Texto de si la respuesta fue correcta o no el cual se encuentra dentro del AnswerPanel
     public Text Answer_Text;
     //Al precionarse este button, se reinicia el juego, este es el texto del button, ya que depnediendo de si la respuesta fue correcta o no apreceera una frase o otra.
-    public Button Button_AnswerCorrecto_Text;
-    public Button Button_AnswerIncorrecto_Text;
+    public GameObject Button_AnswerCorrecto_Text;
+    public GameObject Button_AnswerIncorrecto_Text;
 
     void Start()
     {
@@ -115,14 +115,14 @@ public class Game_Manager : MonoBehaviour
     public void MostrarPanelCorrecto()
     {
         Answer_Text.text = "Correcto";
-        Button_AnswerCorrecto_Text.enabled = true;
+        Button_AnswerCorrecto_Text.SetActive(true);
 
         PanelAnswer.SetActive(true);
     }
     public void MostrarPanelInCorrecto()
     {
         Answer_Text.text = "Incorrecto";
-        Button_AnswerIncorrecto_Text.enabled = true;
+        Button_AnswerIncorrecto_Text.SetActive(true);
 
 
         PanelAnswer.SetActive(true);
